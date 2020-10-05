@@ -1,6 +1,58 @@
 .body {
-    border: 1px solid orchid;
-    background-color: #fee;
     flex: 0.8;
+    padding: 30px;
+    height: 100vh;
     background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+    color: white;
+    overflow-y: overlay;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-end;
+        padding: 10px;
+
+        img {
+            background: white;
+            height: 15vh;
+            width: 150px;
+            margin: 0 20px;
+            box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
+        }
+    }
+
+    &__infoText {
+        flex: 1;
+
+        h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            max-width: 500px;
+        }
+
+        p {
+            font-size: 14px;
+            max-width: 500px;
+        }
+    }
+
+    &__songs {
+        margin: 20px -30px;
+    }
+
+    &__icons > .MuiSvgIcon-root {
+        margin-right: 20px;
+    }
+
+    &__shuffle {
+        font-size: 80px !important;
+
+        &:hover {
+            transition: transform .2s;
+            transform: scale(1.08);
+        }
+    }
 }
